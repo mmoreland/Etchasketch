@@ -2,21 +2,27 @@ const cont = document.querySelector("div");
 
 for(let x=0; x < 16; x++){
     newDiv = document.createElement("div");
-    //newDiv.className = "grid";
-    //newContent = document.createTextNode(x + 1);
-
-    //newDiv.appendChild(newContent);
     cont.appendChild(newDiv);
     
     for(let y=0; y < 16; y++){
         vertDiv = document.createElement("div");
         vertDiv.className = "grid";
         vertContent = document.createTextNode(y + 1);
-
-        vertDiv.appendChild(vertContent);
+        let temp = vertDiv;
+        temp.addEventListener('mouseenter', () => {
+            temp.setAttribute("style", "background-color: black;");
+        });
         newDiv.appendChild(vertDiv);
     }
 }
 
-var grids = getElementsByClassName("grid");
+var grids = document.getElementsByClassName("grid");
+
+/*for (var i = 0; i < grids.length; i++) {
+    var myTurn = grids[i];
+    grids[i].addEventListener('mouseenter', () => {
+        grids[i].setAttribute("style", "background-color: #ccc;");
+    });    
+}
+    */
         
