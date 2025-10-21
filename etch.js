@@ -9,7 +9,7 @@ butt.addEventListener("click", () =>{
                 element.remove();
             });
             make_grid(gridSize);
-        }else{
+        }else{ //could clean up this line by adding an elif so it doesnt prompt every time
             gridSize = alert("Too large, Please enter new grid size between 1-100")
         }
 });
